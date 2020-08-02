@@ -45,6 +45,9 @@ body{
     width: 111px;
     height: 111px;
 }
+.cell:hover{
+    cursor: pointer;
+}
 .bottom{
     border-bottom: 2px solid black;
 }
@@ -66,4 +69,7 @@ body{
     border: 3px solid black;
     border-radius: 5px;
     padding: 15px; 
+}
+#restart:hover{
+    cursor: pointer;
 }

@@ -43,7 +43,11 @@ body{
 .cell{
     display: flex;
     width: 111px;
-    height: 111px;
+    height: 101px;
+    font-size: 5em;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
 }
 .cell:hover{
     cursor: pointer;
@@ -72,4 +76,12 @@ body{
 }
 #restart:hover{
     cursor: pointer;
+}
+.x{
+    text-transform: uppercase;
+    color:red;
+}
+.o{
+    text-transform: uppercase;
+    color: green;
 }

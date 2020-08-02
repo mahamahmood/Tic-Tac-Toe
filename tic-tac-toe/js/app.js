@@ -8,7 +8,11 @@
 let player = 1;
 const $cell = $('.cell');
 
-//Event handlers
+// ===== Function To Start The Game =====
+const startGame = ()=>{
+    alert('Hi There! Welcome to Tic Tac Toe!')
+    alert('The game is set as player vs. player. The first player will play with "X" and the seconde player will play with "Y". Once you decide who start first, click OK to get started. Happy Gaming!')
+}
 // ===== Change Status of Cells Function =====
 const changeStatus = (event)=>{
     let $cellSelected = $(event.currentTarget);
@@ -69,3 +73,5 @@ const checkWin = (text)=>{
 
 // Event listener
 $cell.on('click', changeStatus);
+
+// startGame();

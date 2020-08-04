@@ -29,7 +29,8 @@ const changeStatus = (event) => {
             if (checkWin('x')) {
                 setTimeout(() => { alert('X Won! Congrats!'), 1000 });
                  playerWon = true;
-            } else {
+                 setTimeout(() => { alert('Another round?! Click Restart!'), 2000 });
+            } else{
                 // set player to 2
                 player = 2;
             }
@@ -40,6 +41,7 @@ const changeStatus = (event) => {
                 if (checkWin('o')) {
                     setTimeout(() => { alert('O Won! Congrats!'), 1000 });
                     playerWon = true;
+                    setTimeout(() => { alert('Another round?! Click Restart!'), 2000 });
                 } else {
                     // set player back to 1
                     player = 1;

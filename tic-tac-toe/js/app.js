@@ -19,6 +19,7 @@ const startGame = () => {
 }
 
 // ===== Change Status of Cells Function ===== //
+// This function is handler to clicks on game board cells. It check for a click and give a class and text of X if player = 1 and class and text of O if player = 2. Also, it calls check win and check tie functions to alert status and next steps.
 const changeStatus = (event) => {
     let $cellSelected = $(event.currentTarget);
     if ($cellSelected.hasClass('x') || $cellSelected.hasClass('o')) {
@@ -26,15 +27,18 @@ const changeStatus = (event) => {
     } else {
         if ((player === 1) && (playerWon === false)) {
             $cellSelected.addClass('x').text('x');
-            clickCounter++;
+            clickCounter++;// increment clickCounter by one to check for tie later
             // check if player 1 won
             if (checkWin('x')) {
+                // to wait for the mark X to show before the alert
                 setTimeout(() => { alert('X Won! Congrats!'), 1000 });
-                 playerWon = true;
-                 setTimeout(() => { alert('Another round?! Click "Restart!"'), 2000 });
-            }else if(checkTie()){
+                // to stop player 1 from adding Xs to empty cells after winning
+                playerWon = true;
+                setTimeout(() => { alert('Another round?! Click "Restart!"'), 2000 });
+                //check for tie
+            } else if (checkTie()) {
 
-            } else{
+            } else {
                 // set player to 2
                 player = 2;
             }
@@ -44,7 +48,9 @@ const changeStatus = (event) => {
                 clickCounter++;
                 // check if player 2 won
                 if (checkWin('o')) {
+                    // to wait for the mark O to show before the alert
                     setTimeout(() => { alert('O Won! Congrats!'), 1000 });
+                    // to stop player 2 from adding Os to empty cells after winning
                     playerWon = true;
                     setTimeout(() => { alert('Another round?! Click "Restart!"'), 2000 });
                 } else {
@@ -58,7 +64,6 @@ const changeStatus = (event) => {
 
 // ===== Win Function ===== //
 // There are 8 ways to win. If 3 cells on the same row, colum, or diagonal has the same text, then we have a winner!
-
 const checkWin = (text) => {
     //check win for each row(3)
     if ($('#0').hasClass(text) && $('#1').hasClass(text) && $('#2').hasClass(text)) {
@@ -79,20 +84,21 @@ const checkWin = (text) => {
         return true;
     } else if ($('#2').hasClass(text) && $('#4').hasClass(text) && $('#6').hasClass(text)) {
         return true;
-    } else {
+    } else {// cells are empty
         return false;
     }
 
 }
 
-// ===== Check Tie ===== //
-const checkTie = ()=>{
-    if((clickCounter === 9) && (checkWin() === false)){
+// ===== Check Tie Function ===== //
+// If players click on all 9 cells and checkWin is false then that's a tie.
+const checkTie = () => {
+    if ((clickCounter === 9) && (checkWin() === false)) {
         setTimeout(() => { alert("It's a tie! Click 'Restart' to play again!"), 1000 });
     }
 }
 
-// ===== Restart Game ===== //
+// ===== Restart Button Function ===== //
 const restartGame = () => {
     location.reload();
 }

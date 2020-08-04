@@ -25,9 +25,6 @@ body{
     padding-top: 3%;
     padding-bottom: 3%;
     font-size: 3em;
-    background: linear-gradient(black, rgb(87, 86, 86), black);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 /* ======== Tic Tac Toe Game ======== */
 .tictactoe{
@@ -106,4 +103,14 @@ body{
 .o{
     text-transform: uppercase;
     color: green;
+}
+/* ======== Min Width Declaration ======== */
+@media only screen and (min-width: 600px){
+    .tictactoe{
+        width: 600px;
+    margin: auto;
+    }
+    .headline{
+        width: 600px;
+    }
 }

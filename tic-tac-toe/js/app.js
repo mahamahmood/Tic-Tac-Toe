@@ -10,6 +10,7 @@ let player = 1;
 const $cell = $('.cell');
 const $restart = $('#restart');
 let playerWon = false;
+let clickCounter = 0;
 
 // ===== Function To Start The Game ===== //
 const startGame = () => {
@@ -25,11 +26,14 @@ const changeStatus = (event) => {
     } else {
         if ((player === 1) && (playerWon === false)) {
             $cellSelected.addClass('x').text('x');
+            clickCounter++;
             // check if player 1 won
             if (checkWin('x')) {
                 setTimeout(() => { alert('X Won! Congrats!'), 1000 });
                  playerWon = true;
-                 setTimeout(() => { alert('Another round?! Click Restart!'), 2000 });
+                 setTimeout(() => { alert('Another round?! Click "Restart!"'), 2000 });
+            }else if(checkTie()){
+
             } else{
                 // set player to 2
                 player = 2;
@@ -37,11 +41,12 @@ const changeStatus = (event) => {
         } else {
             if ((player === 2) && (playerWon === false)) {
                 $cellSelected.addClass('o').text('o');
+                clickCounter++;
                 // check if player 2 won
                 if (checkWin('o')) {
                     setTimeout(() => { alert('O Won! Congrats!'), 1000 });
                     playerWon = true;
-                    setTimeout(() => { alert('Another round?! Click Restart!'), 2000 });
+                    setTimeout(() => { alert('Another round?! Click "Restart!"'), 2000 });
                 } else {
                     // set player back to 1
                     player = 1;
@@ -78,6 +83,13 @@ const checkWin = (text) => {
         return false;
     }
 
+}
+
+// ===== Check Tie ===== //
+const checkTie = ()=>{
+    if((clickCounter === 9) && (checkWin() === false)){
+        setTimeout(() => { alert("It's a tie! Click 'Restart' to play again!"), 1000 });
+    }
 }
 
 // ===== Restart Game ===== //

@@ -16,7 +16,7 @@ https://tic-tac-toe-git-master.mahamahmood.vercel.app/
 ## Approach Taken
 The approach I took is that I gave all cells of the game board a class of cells and created an event listener to listen to any click with the class of cells. Once a click occurs, the event handler will check a few if statements. If the conditions are met in the if statements, the current target will get a class and text of "x" for the first click and a class and text of "o" for the second click.
 
-For the win logic, I gave all cells a unique id of numbers from 0-8 (hard code in HTML). Then, created a win function that checks for all of the 8 possible ways to win. For example, if the cells of the ids of 0, 1, 2 has the same class of either "o" or "x", then that's a win.
+For the win logic, I gave all cells a unique id of numbers from 0-8 (hard code in HTML). Then, created a win function that checks for all of the 8 possible ways to win. For example, if the cells of the ids of #0, #1, #2 has the same class of either "o" or "x", then that's a win.
 
 
 ## Technologies Used
@@ -29,10 +29,13 @@ For the win logic, I gave all cells a unique id of numbers from 0-8 (hard code i
 - Alerts
 - Reseat Button
 
+## Wireframes 
+[html wirefram](img/html.jpg)
+
+[css wirefram](img/css.jpg)
+
 ## Future Development
 
 - Score Board
 - Players Names Input
 - Responsive Desgin
-
-## Wireframes 

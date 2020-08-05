@@ -108,4 +108,4 @@ $cell.on('click', changeStatus);
 $restart.on('click', restartGame)
 
 // ===== Invoking Start Game Function ===== //
-// startGame();
+startGame();

@@ -21,7 +21,7 @@ For the win logic, I gave all cells a unique id of numbers from 0-8 (hard code i
 
 ## Technologies Used
 
-- HTML5, CSS, Javascript, JQuery
+- HTML5, CSS, Javascript, Jquery
 - Visual Studio Code
 
 ## Features

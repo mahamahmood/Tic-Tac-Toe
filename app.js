@@ -11,12 +11,7 @@ const $cell = $('.cell');
 const $restart = $('#restart');
 let playerWon = false;
 let clickCounter = 0;
-
-// ===== Function To Start The Game ===== //
-const startGame = () => {
-    alert('Hi There! Welcome to Tic Tac Toe!')
-    alert('The game is set as player vs. player. The first player will play with "X" and the seconde player will play with "Y". Once you decide who start first, click OK to get started. Happy Gaming!')
-}
+const $gameAboutButton = $('#gameaboutbutton')
 
 // ===== Change Status of Cells Function ===== //
 // This function is handler to clicks on game board cells. It check for a click and give a class and text of X if player = 1 and class and text of O if player = 2. Also, it calls check win and check tie functions to alert status and next steps.
@@ -103,9 +98,13 @@ const restartGame = () => {
     location.reload();
 }
 
+// ===== About The Game Button ===== //
+const showGameAbout = () => {
+    alert('Hi There! Welcome to Tic Tac Toe! The game is set as player vs. player. The first player will play with "X" and the seconde player will play with "Y". Once you decide who starts first, click OK to get started. Happy Gaming!')
+}
+
 // ===== Event listeners ===== //
 $cell.on('click', changeStatus);
 $restart.on('click', restartGame)
+$gameAboutButton.on('click', showGameAbout)
 
-// ===== Invoking Start Game Function ===== //
-startGame();

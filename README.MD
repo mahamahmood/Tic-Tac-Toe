@@ -30,9 +30,9 @@ For the win logic, I gave all cells a unique id of numbers from 0-8 (hard code i
 - Reseat Button
 
 ## Wireframes 
-[html wirefram](img/html.jpg)
+![html wirefram](img/html.jpg)
 
-[css wirefram](img/css.jpg)
+![css wirefram](img/css.jpg)
 
 ## Future Development
 

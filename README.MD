@@ -28,7 +28,7 @@ The tie logic on the other hand has "46,080" ways to actually happen! Thus, my c
 ## Features
 
 - About The Game Button
-- Reseat Button
+- Restart Button
 - Alerts
 
 ## Wireframes 

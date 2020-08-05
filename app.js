@@ -100,7 +100,7 @@ const restartGame = () => {
 
 // ===== About The Game Button ===== //
 const showGameAbout = () => {
-    alert('Hi There! Welcome to Tic Tac Toe! The game is set as player vs. player. The first player will play with "X" and the seconde player will play with "Y". Once you decide who starts first, click OK to get started. Happy Gaming!')
+    alert('Hi There! Welcome to the world where you can play Tic Tac Toe none stop! The game is set as player vs. player. The first player will play with "X" and the seconde player will play with "O". Once you decide who starts first, click OK to get started. Happy Gaming!')
 }
 
 // ===== Event listeners ===== //

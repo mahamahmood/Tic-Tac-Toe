@@ -21,7 +21,7 @@ For the win logic, I gave all cells a unique id of numbers from 0-8 (hard code i
 
 ## Technologies Used
 
-- HTML5, CSS, Javascript, Jquery
+- HTML5, CSS, Javascript, JQuery
 - Visual Studio Code
 
 ## Features
@@ -37,5 +37,5 @@ For the win logic, I gave all cells a unique id of numbers from 0-8 (hard code i
 ## Future Development
 
 - Score Board
-- Players Names Input
+- Players Names' Input
 - Responsive Desgin

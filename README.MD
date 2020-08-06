@@ -41,3 +41,4 @@ The tie logic on the other hand has "46,080" ways to actually happen! Thus, my c
 - Score Board
 - Players Names' Input
 - Responsive Desgin
+- For product usability purposes, stop the alert of "Click Restart" after the players play for 2 or 3 rounds.
